@@ -1,0 +1,8 @@
+#allow wireguard on port 1337
+sudo ufw allow out 1337/tcp
+sudo ufw allow out 443/tcp
+
+#block DNS leaks
+sudo ufw deny out on wwan0 from any port 53
+sudo ufw deny out on wlan0 from any port 53
+#sudo ufw allow out on pia from any port 53

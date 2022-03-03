@@ -1,0 +1,7 @@
+#ufw allows input dhcp by default
+
+ufw allow in on wlan0 from 10.42.0.0/32 to 10.42.0.0/32 port 67,68 proto udp comment dhcp in udp
+ufw allow in on wlan0 from 10.42.0.0/32 to 10.42.0.0/32 port 67,68 proto icmp comment dhcp in icmp
+
+ufw allow out on wlan0 from 10.42.0.0/32 port 67,68 to 10.42.0.0/32 port 67,68 proto udp comment 'dhcp out udp'
+ufw allow out on wlan0 from 10.42.0.0/32 port 67,68 to 10.42.0.0/32 port 67,68 proto icmp comment 'dhcp out icmp'

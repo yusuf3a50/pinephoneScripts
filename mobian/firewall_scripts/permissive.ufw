@@ -1,0 +1,14 @@
+ufw status verbose
+
+#reset the firewall so as not to duplicate rules
+ufw reset
+
+#set default policies
+ufw default allow routed
+ufw default allow incoming
+ufw default allow outgoing
+
+ufw reload
+ufw enable
+
+ufw status verbose

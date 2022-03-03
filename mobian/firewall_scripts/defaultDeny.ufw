@@ -1,0 +1,11 @@
+echo "current rules:"
+ufw status verbose
+ufw reset
+
+ufw default deny routed
+ufw default deny incoming
+ufw default deny outgoing
+ufw enable
+
+echo "new rules:"
+ufw status verbose

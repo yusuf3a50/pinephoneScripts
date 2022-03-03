@@ -1,0 +1,28 @@
+ufw status verbose
+
+#reset the firewall so as not to duplicate rules
+
+#set default policies
+ufw default allow routed
+ufw default deny incoming
+ufw default deny outgoing
+
+ufw allow http comment 'http in'
+ufw allow out http comment 'http out' 
+ufw allow out 443/tcp
+ufw allow 443/tcp
+
+ufw allow out 9050/tcp
+ufw allow 9050/tcp
+ufw allow out 9001/tcp
+
+ufw allow out 53/udp comment '53/udp (dns)'
+ufw allow 53/udp comment '53/udp (dns)'
+
+ufw allow 123/udp
+ufw allow out 123/udp
+
+ufw reload
+ufw enable
+
+ufw status verbose

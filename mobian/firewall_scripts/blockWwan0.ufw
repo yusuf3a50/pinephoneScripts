@@ -1,0 +1,2 @@
+ufw deny in on wwan0
+ufw deny out on wwan0

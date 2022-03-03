@@ -1,0 +1,7 @@
+#allows connections necessary for hotspot
+
+#wlan0 dns?
+sudo ufw allow out on wlan0 to any proto udp port 5353
+
+#wlan0 dhcp
+sudo ufw allow out on wlan0 to any proto udp port 67,68

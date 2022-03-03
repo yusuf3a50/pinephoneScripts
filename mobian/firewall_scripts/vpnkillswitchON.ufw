@@ -1,0 +1,4 @@
+#vpn killswitch
+ufw reset
+ufw allow
+

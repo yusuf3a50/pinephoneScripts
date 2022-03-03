@@ -1,0 +1,6 @@
+#allow openvpn ports
+
+#default encryption
+sudo ufw allow out 1198/udp
+#strong encryption
+sudo ufw allow out 1197/udp
